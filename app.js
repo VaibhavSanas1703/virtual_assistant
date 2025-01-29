@@ -29,33 +29,57 @@ button.addEventListener("click", () => {
 function takeCommand(msg) {
      if (msg.includes("hello") || msg.includes("heyy") || msg.includes("hello jarvis") || msg.includes("heyy jarvis")) {
           speakNow(`Hello ${username}, How can I Help you`)
+          setTimeout(() => {
+               userText.innerHTML = "Click to Speak"
+          }, 5000);
      }
      else if (msg.includes("jarvis who are you") || msg.includes("who are you")) {
-          speakNow("Heyy I am your virtual assistant, created by vaibhav sanas")
+          speakNow("Heyy I am your virtual assistant, created by Vaibhav")
+          setTimeout(() => {
+               userText.innerHTML = "Click to Speak"
+          }, 5000);
      }
      else if (msg.includes("open youtube") || msg.includes("jarvis open youtube") || msg.includes("youtube")) {
           window.open("https://www.youtube.com", "_blank")
           speakNow("Opening youtube")
+          setTimeout(() => {
+               userText.innerHTML = "Click to Speak"
+          }, 5000);
      }
      else if (msg.includes("open instagram") || msg.includes("jarvis open instagram") || msg.includes("instagram")) {
           window.open("https://www.instagram.com/", "_blank")
           speakNow("Opening instagram")
+          setTimeout(() => {
+               userText.innerHTML = "Click to Speak"
+          }, 5000);
      }
      else if (msg.includes("open whatsapp") || msg.includes("jarvis open whatsapp") || msg.includes("whatsapp")) {
           window.open("https://web.whatsapp.com/", "_blank")
           speakNow("Opening whatsapp")
+          setTimeout(() => {
+               userText.innerHTML = "Click to Speak"
+          }, 5000);
      }
      else if (msg.includes("open twitter") || msg.includes("jarvis open twitter") || msg.includes("twitter")) {
           window.open("https://x.com/?lang=en&mx=2", "_blank")
           speakNow("Opening twitter")
+          setTimeout(() => {
+               userText.innerHTML = "Click to Speak"
+          }, 5000);
      }
      else if (msg.includes("open calculator") || msg.includes("jarvis open calculator")) {
           window.open("calculator://")
           speakNow("Opening calculator")
+          setTimeout(() => {
+               userText.innerHTML = "Click to Speak"
+          }, 5000);
      }
      else if (msg.includes('jarvis what is the time now') || msg.includes("time")) {
           let date = new Date().toLocaleTimeString()
           speakNow(date)
+          setTimeout(() => {
+               userText.innerHTML = "Click to Speak"
+          }, 5000);
      }
      else if (msg.includes('jarvis what is the today') || msg.includes("day")) {
           let date = new Date()
@@ -84,10 +108,16 @@ function takeCommand(msg) {
                     speakNow("Today is Saturday")
                     break;
           }
+          setTimeout(() => {
+               userText.innerHTML = "Click to Speak"
+          }, 5000);
      }
      else {
           window.open(`https://www.google.com/search?q=${msg}`)
           speakNow(`What i found in internet regarding, ${msg}`)
+          setTimeout(() => {
+               userText.innerHTML = "Click to Speak"
+          }, 5000);
      }
 }
 
